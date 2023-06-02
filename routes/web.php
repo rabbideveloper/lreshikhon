@@ -59,6 +59,12 @@ Route::group(['prefix' => 'math'],function () {
    Route::get('sum/{num1}/{num2}', [MathController::class,'sum']);
 });
 
+// class 6 routes
+
+Route::get('home',[SiteController::class,'home']);
+Route::get('about',[SiteController::class,'about']);
+Route::get('contact',[SiteController::class,'contact']);
+Route::get('extra',[SiteController::class,'extra']);
 
 
 

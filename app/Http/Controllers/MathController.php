@@ -6,13 +6,27 @@ use Illuminate\Http\Request;
 
 class MathController extends Controller
 {
-    public function Sum($number1,$number2) {
-        $sum = $number1 + $number2;
-        return view('sum',compact('sum'));
+    public function sum($num1, $num2)
+    {
+        $result = $num1 + $num2;
+        return view('sum', compact('result'));
     }
 
-    public function Multy($number1,$number2) {
-        $multy = $number1 * $number2;
-        return view('multy',compact('multy'));
+    public function sub()
+    {
+        $uri = \request()->path();
+        $url = request()->url();
+        $method = request()->method();
+        return $method;
+    }
+
+    public function mult()
+    {
+        return "Sum Route calling";
+    }
+
+    public function div()
+    {
+        return "Sum Route calling";
     }
 }

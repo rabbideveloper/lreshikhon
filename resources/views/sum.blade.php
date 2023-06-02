@@ -9,9 +9,42 @@
 </head>
 <body>
 
-    <h1>Sum</h1>
+{{--    <h2>Result is => {{$result}}</h2>--}}
 
-    <p>Your Sum number is = {{$sum}}</p>
-    <button><a href="/" style="text-decoration: none">Back</a></button>
+<h1>Result is => <?php echo $result; ?></h1>
+
+<?php
+$mult = 20 * 5;
+?>
+
+<h3> Multiplication value is {{$mult}} </h3>
+
+@php
+    $nameList = ['rabbi','siam','salman','samia'];
+@endphp
+
+@foreach($nameList as $name)
+    <p>{{ $name }}</p>
+@endforeach
+<?php $result = 1;  ?>
+<?php
+if ($result % 2 == 0) {
+    echo "Even Number";
+} else {
+    echo "Odd Number";
+}
+?>
+
+@php
+    $result = 1000;
+@endphp
+
+@if ($result % 2 == 0)
+    <h2>Even Number => {{$result}} </h2>
+@else
+    <h2>Odd Number => {{$result}}</h2>
+@endif
+
+
 </body>
 </html>
